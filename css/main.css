@@ -1,3 +1,27 @@
+/************************************************
+*
+* File - main.css
+* Author - Matt Antonio
+* Project - MDD App
+* Location - css/main.css
+* Date - 04/15/14
+*
+************************************************/
+/*
+GENERAL ELEMENTS
+********************************************** */
+html {
+  font-size: 1px;
+}
+
+body {
+  background-color: #f6f4ef !important;
+  font-size: 16rem;
+}
+
+/*
+BOOTSTRAP THEME ELEMENTS
+********************************************** */
 #wrapper {
   padding-left: 250px;
   transition: all 0.4s ease 0s;
@@ -7,7 +31,7 @@
   margin-left: -250px;
   left: 250px;
   width: 250px;
-  background: #000;
+  background: #323227;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -34,13 +58,13 @@
 }
 
 .sidebar-nav li a {
-  color: #999999;
+  color: #f7a800;
   display: block;
   text-decoration: none;
 }
 
 .sidebar-nav li a:hover {
-  color: #fff;
+  color: #f6f4ef;
   background: rgba(255,255,255,0.2);
   text-decoration: none;
 }
@@ -53,7 +77,7 @@
 .sidebar-nav > .sidebar-brand {
   height: 65px;
   line-height: 60px;
-  font-size: 18px;
+  font-size: 18rem;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -114,4 +138,4 @@
   padding: 15px;
 }
 
-}
+
