@@ -19,11 +19,40 @@ body {
     font-size: 16rem;
     font-family: 'Alegreya Sans', sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+  /*font-family: 'Exo', sans-serif;*/
+  font-weight: 900;
+  color: #f2a800;
+}
+h1 {
+  font-size: 36rem;
+}
+h2 {
+  font-size: 30rem;
+}
+h3 {
+  font-size: 26rem;
+}
+h4 {
+  font-size: 20rem;
+}
+h5 {
+  font-size: 18rem;
+}
+h6 {
+  font-size: 16rem;
+}
+.fsOrange {
+  color: #f2a800;
+}
 .nova {
   font-family: 'Nova Square', cursive;
 }
 .heavy {
   font-weight: 900;
+}
+.med {
+  font-weight: 700;
 }
 /*
 BOOTSTRAP THEME ELEMENTS
@@ -46,7 +75,7 @@ BOOTSTRAP THEME ELEMENTS
     box-shadow: 3px 0 0 #f2a800;
 }
 #page-content-wrapper {
-    width: 100%;
+    width: 99%;
 }
 .sidebar-nav {
     position: absolute;
@@ -64,9 +93,10 @@ BOOTSTRAP THEME ELEMENTS
     color: ghostwhite;
     display: block;
     text-decoration: none;
+    font-weight: 400;
 }
 .sidebar-nav li a:hover {
-    color: #323227;
+  color: #2a2a2a;
     background: #f2a800;
     text-decoration: none;
 }
@@ -76,13 +106,8 @@ BOOTSTRAP THEME ELEMENTS
 .sidebar-nav > .sidebar-brand {
     height: 65px;
     line-height: 60px;
-    font-size: 36rem;
-}
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
 }
 .sidebar-nav > .sidebar-brand a:hover {
-    color: #f2a800;
     background: none;
 }
 .content-header {
@@ -104,14 +129,18 @@ BOOTSTRAP THEME ELEMENTS
 /*
 MAIN NAV / BRAND
 ********************************************** */
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav > .sidebar-brand a h1 {
   color: ghostwhite;
+  font-weight: 400;
 }
-.sidebar-nav > .sidebar-brand a span.heavy {
+.sidebar-nav > .sidebar-brand a:hover h1 {
   color: #f2a800;
 }
+/*.sidebar-nav > .sidebar-brand a h1 span.heavy {
+  color: #f2a800;
+}*/
 
-.sidebar-nav > .sidebar-brand a:hover span.heavy {
+.sidebar-nav > .sidebar-brand a:hover h1 span.heavy {
   color: ghostwhite;
 }
 
@@ -121,6 +150,7 @@ GOOGLE MAP
 #map-canvas {
   width: 750px;
   height: 500px;
+  margin: 0 auto;
 }
 /*
 FOOTER
@@ -131,16 +161,18 @@ FOOTER
   border-top: 3px solid #f2a800;
   position: fixed;
   bottom: 0;
-  right: 0;
+  /*right: 0;*/
+  left: 268px;
   width: 100%;
   padding-right: 10px;
 }
 #footer footer {
   padding: 10px;
   overflow: hidden;
+  /*text-align: center;*/
 }
 #copyright {
-  float: right;
+  /*float: right;*/
   color: ghostwhite;
 }
 /*
