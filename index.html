@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mddFSApp">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>foodhangR</title>
 
     <!-- BOOTSTRAP CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -16,9 +16,16 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
+    <!-- GOOGLE FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Nova+Square' rel='stylesheet' type='text/css'>
+
     <!-- ANGULAR -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.5/angular.min.js"></script>
     <script src="http://code.angularjs.org/1.3.0-beta.5/angular-route.min.js"></script>
+
+    <!-- GOOGLE MAPS -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2_dnlKE13DikhEpEO4MBUb7-ZtGFn4&sensor=true"></script>
 
 </head>
 
@@ -29,7 +36,7 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand"><a href="#">Start Bootstrap</a>
+                <li class="sidebar-brand"><a href="#">food<span class="heavy">hangR</span></a>
                 </li>
                 <li><a href="#">Dashboard</a>
                 </li>
@@ -59,24 +66,20 @@
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
                 <div class="row">
-                    <div class="col-md-12">
-                        <p class="lead">This simple sidebar template has a hint of JavaScript to make the template responsive. It also includes Font Awesome icon fonts.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="well">The template still uses the default Bootstrap rows and columns.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <p class="well">But the full-width layout means that you wont be using containers.</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">Three Column Example</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">Three Column Example</p>
-                    </div>
-                    <div class="col-md-4">
-                        <p class="well">You get the idea! Do whatever you want in the page content area!</p>
-                    </div>
+
+                    <!-- Container for holding the views -->
+                    <div ng-view></div>
+
+                </div>
+
+                <div id="footer" class="row">
+                    <footer>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <p id="copyright">Copyright &copy; 2014 // Matt Antonio // Mobile Device Deployment // Full Sail - Web Design &amp; Development B.S.</p>
+                            </div>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
@@ -87,6 +90,7 @@
     <script src="js/main.js"></script>
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.js"></script>
+
 
     <!-- Custom JavaScript for the Menu Toggle -->
     <script>
