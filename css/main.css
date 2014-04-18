@@ -11,48 +11,45 @@
 /*
 GENERAL ELEMENTS
 ********************************************** */
- html {
+html {
     font-size: 1px;
 }
 body {
     background-color: ghostwhite;
     font-size: 16rem;
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family:'Alegreya Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-  /*font-family: 'Exo', sans-serif;*/
-  font-weight: 900;
-  color: #f2a800;
+    /*font-family: 'Exo', sans-serif;*/
+    font-weight: 900;
+    color: #f2a800;
 }
 h1 {
-  font-size: 36rem;
+    font-size: 36rem;
 }
 h2 {
-  font-size: 30rem;
+    font-size: 30rem;
 }
 h3 {
-  font-size: 26rem;
+    font-size: 26rem;
 }
 h4 {
-  font-size: 20rem;
+    font-size: 20rem;
 }
 h5 {
-  font-size: 18rem;
+    font-size: 18rem;
 }
 h6 {
-  font-size: 16rem;
+    font-size: 16rem;
 }
 .fsOrange {
-  color: #f2a800;
-}
-.nova {
-  font-family: 'Nova Square', cursive;
+    color: #f2a800;
 }
 .heavy {
-  font-weight: 900;
+    font-weight: 900;
 }
 .med {
-  font-weight: 700;
+    font-weight: 700;
 }
 /*
 BOOTSTRAP THEME ELEMENTS
@@ -65,7 +62,7 @@ BOOTSTRAP THEME ELEMENTS
     margin-left: -250px;
     left: 250px;
     width: 250px;
-    background-color: #2a2a2a;
+    background-color: #323227;
     position: fixed;
     height: 100%;
     overflow-y: auto;
@@ -96,7 +93,7 @@ BOOTSTRAP THEME ELEMENTS
     font-weight: 400;
 }
 .sidebar-nav li a:hover {
-  color: #2a2a2a;
+    color: #323227;
     background: #f2a800;
     text-decoration: none;
 }
@@ -129,56 +126,62 @@ BOOTSTRAP THEME ELEMENTS
 /*
 MAIN NAV / BRAND
 ********************************************** */
-.sidebar-nav > .sidebar-brand a h1 {
-  color: ghostwhite;
-  font-weight: 400;
+ .sidebar-nav > .sidebar-brand a h1 {
+    color: ghostwhite;
+    font-weight: 400;
 }
 .sidebar-nav > .sidebar-brand a:hover h1 {
-  color: #f2a800;
+    color: #f2a800;
 }
 /*.sidebar-nav > .sidebar-brand a h1 span.heavy {
   color: #f2a800;
 }*/
-
-.sidebar-nav > .sidebar-brand a:hover h1 span.heavy {
-  color: ghostwhite;
+ .sidebar-nav > .sidebar-brand a:hover h1 span.heavy {
+    color: ghostwhite;
 }
-
+.sidebar-brand .heavy {
+    margin-left: -5px;
+}
 /*
 GOOGLE MAP
 ********************************************** */
-#map-canvas {
-  width: 750px;
-  height: 500px;
-  margin: 0 auto;
+.angular-google-map-container {
+    height: 468px;
+}
+ #map-canvas {
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+    box-shadow: 6px 6px 0 #f2a800, 12px 12px 0 #323227;
+    border: 6px solid #323227;
 }
 /*
 FOOTER
 ********************************************** */
-#footer {
-  background-color: #2a2a2a;
-  min-height: 75px;
-  border-top: 3px solid #f2a800;
-  position: fixed;
-  bottom: 0;
-  /*right: 0;*/
-  left: 268px;
-  width: 100%;
-  padding-right: 10px;
+ #footer {
+    background-color: #323227;
+    min-height: 75px;
+    border-top: 3px solid #f2a800;
+    position: fixed;
+    bottom: 0;
+    /*right: 0;*/
+    left: 268px;
+    width: 100%;
+    padding-right: 10px;
 }
 #footer footer {
-  padding: 10px;
-  overflow: hidden;
-  /*text-align: center;*/
+    padding: 10px;
+    overflow: hidden;
+    /*text-align: center;*/
 }
 #copyright {
-  /*float: right;*/
-  color: ghostwhite;
+    /*float: right;*/
+    color: ghostwhite;
 }
 /*
 MEDIA QUERIES
 ********************************************** */
-@media (max-width:767px) {
+ @media (max-width:767px) {
     #wrapper {
         padding-left: 0;
     }
