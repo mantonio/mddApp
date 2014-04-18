@@ -24,15 +24,19 @@
     <script type="text/javascript" src="js/angular/angular.js"></script>
     <script type="text/javascript" src="js/angular/angular-route.js"></script>
 
-       <!-- GOOGLE MAPS -->
+    <!-- GOOGLE MAPS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2_dnlKE13DikhEpEO4MBUb7-ZtGFn4&sensor=true"></script>
-    
+
+    <!-- GOOGLE+ LOGIN -->
+    <script src="http://jeradbitner.com/angular-directive.g-signin/google-plus-signin.js"></script>
+
     <!-- JS FILES -->
     <script src="js/app/main.js"></script>
     <script src="js/app/jquery-1.10.2.js"></script>
     <script src="js/app/bootstrap.js"></script>
     <script src="js/app/controllers/api_controller.js"></script>
     <script src="js/app/controllers/list_controller.js"></script>
+    <script src="js/app/controllers/addFood_controller.js"></script>
 
 </head>
 
@@ -45,12 +49,16 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        <h1>food<span class="heavy fsOrange">hangR</span></h1>
+                        <h1>food
+                            <span class="heavy fsOrange">hangR</span>
+                        </h1>
                     </a>
                 </li>
-                <li><a href="#">Dashboard</a>
+                <li><a href="#/">Dashboard</a>
                 </li>
                 <li><a href="#">All Discounts</a>
+                </li>
+                <li><a href="#/addFood">Add Food</a>
                 </li>
                 <li><a href="#">About</a>
                 </li>
@@ -66,7 +74,8 @@
                     <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
                     What's for lunch?
                 </h1>
-            </div><!-- END content-header -->
+            </div>
+            <!-- END content-header -->
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
                 <div class="row">
@@ -74,21 +83,28 @@
                     <!-- Container for holding the views -->
                     <div ng-view></div>
 
-                </div><!-- END row -->
+                </div>
+                <!-- END row -->
 
                 <div id="footer" class="row">
                     <footer>
                         <div class="row">
                             <div class="col-lg-12">
                                 <p id="copyright">Copyright &copy; 2014 // Matt Antonio // Mobile Device Deployment // Full Sail - Web Design &amp; Development B.S.</p>
-                            </div><!-- END col-lg-12 -->
-                        </div><!-- END row -->
+                            </div>
+                            <!-- END col-lg-12 -->
+                        </div>
+                        <!-- END row -->
                     </footer>
-                </div><!-- END footer -->
-            </div><!-- END page-content inset -->
-        </div><!-- END page-content-wrapper -->
+                </div>
+                <!-- END footer -->
+            </div>
+            <!-- END page-content inset -->
+        </div>
+        <!-- END page-content-wrapper -->
 
-    </div><!-- END wrapper --> 
+    </div>
+    <!-- END wrapper -->
 
 </body>
 
