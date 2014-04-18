@@ -3,7 +3,7 @@ var app = angular.module('mddFSApp', ['ngRoute', 'directive.g+signin', 'google-m
 app.config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'views/list_view.html',
+            templateUrl: 'views/map_view.html',
             controller: 'ApiController'
         })
         .when('/addFood', {
