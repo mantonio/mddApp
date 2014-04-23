@@ -207,10 +207,12 @@ FOOTER
 ********************************************** */
  footer {
     /*background-color: yellow;*/
-    width: 100%;
+    width: 82%;
     min-height: 75px;
     text-align: center;
     display: flex;
+    position: fixed;
+    bottom: 0;
 }
 footer div {
     color: #323227;
