@@ -13,6 +13,15 @@
         <!-- END form-group -->
 
         <div class="form-group">
+            <label for="discount" class="col-sm-2 control-label">Address:</label>
+            <div class="col-sm-10">
+                <input type="input" class="form-control" id="address" placeholder="3300 University Blvd, Winter Park, FL 32792">
+            </div>
+            <!-- END col-sm-10 -->
+        </div>
+        <!-- END form-group -->
+
+        <div class="form-group">
             <label for="discount" class="col-sm-2 control-label">Discount Given:</label>
             <div class="col-sm-10">
                 <input type="input" class="form-control" id="discount" placeholder="10%">
@@ -23,7 +32,8 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2"></google-plus-signin>
+                <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2" id="g-login"></google-plus-signin>
+                <input type="submit" class="btn btn-default" id="addFood-btn" value="Submit">
             </div>
         </div>
     </form>

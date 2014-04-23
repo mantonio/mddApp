@@ -69,6 +69,8 @@ BOOTSTRAP THEME ELEMENTS
     z-index: 1000;
     transition: all 0.4s ease 0s;
     margin-right: 0;
+    /*border-right: 5px solid #f2a800;*/
+    box-shadow: 5px 0 0 #f2a800;
 }
 #page-content-wrapper {
     width: 99%;
@@ -80,8 +82,7 @@ BOOTSTRAP THEME ELEMENTS
     list-style: none;
     margin: 0;
     padding: 0;
-    border-right: 5px solid #f2a800;
-    bottom: 70px;
+    /*bottom: 70px;*/
 }
 .sidebar-nav li {
     line-height: 40px;
@@ -204,25 +205,22 @@ Pseudo ::after element .perspective:after {
 /*
 FOOTER
 ********************************************** */
- #footer {
-    background-color: #323227;
+ footer {
+    /*background-color: yellow;*/
+    width: 82%;
     min-height: 75px;
-    border-top: 5px solid #f2a800;
+    text-align: center;
+    display: flex;
     position: fixed;
     bottom: 0;
-    /*right: 0;*/
-    left: 265px;
-    width: 100%;
-    padding-right: 10px;
 }
-#footer footer {
-    padding: 10px;
-    overflow: hidden;
-    /*text-align: center;*/
+footer div {
+    color: #323227;
+    /*width: 300px;*/
+    margin: auto 0;
 }
-#copyright {
-    /*float: right;*/
-    color: ghostwhite;
+footer div p {
+  text-align: center;
 }
 /*
 MEDIA QUERIES
