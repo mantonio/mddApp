@@ -1,4 +1,4 @@
-app.controller("ApiController", function($scope, $http) {
+app.controller("MapController", function($scope, $http) {
     $scope.googleMapsKey = "AIzaSyB0w2_dnlKE13DikhEpEO4MBUb7-ZtGFn4";
 
     $scope.map = {
