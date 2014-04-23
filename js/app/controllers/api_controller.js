@@ -6,7 +6,7 @@ app.controller("ApiController", function($scope, $http) {
             latitude: 28.597161,
             longitude: -81.301508
         },
-        zoom: 8
+        zoom: 16
     };
 
 });
