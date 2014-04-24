@@ -22,6 +22,7 @@ if(isset($_GET["restaurant-name"]) && isset($_GET["address"]) && isset($_GET["di
 }else {
     $result["success"] = false;
 }
+echo($result);
 
 echo json_encode($result);
 

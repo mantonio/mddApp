@@ -1,12 +1,12 @@
 <div class="col-lg-8">
     <p>Know of a restaurant not in the list yet?</p>
     <p>Enter the restaurant name and discount, log in with a Google account, then click submit!</p>
-    <form class="form-horizontal" role="form">
+    <form class="form-horizontal" role="form" action="db-connect.php" method="POST">
 
         <div class="form-group">
             <label for="restaurant-name" class="col-sm-2 control-label">Restaurant:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" id="restaurant-name" placeholder="Firehouse" required>
+                <input ng-model="restaurant-name" type="input" class="form-control" id="restaurant-name" placeholder="Firehouse" required>
             </div>
             <!-- END col-sm-10 -->
         </div>
@@ -15,7 +15,7 @@
         <div class="form-group">
             <label for="discount" class="col-sm-2 control-label">Address:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" id="address" placeholder="3300 University Blvd, Winter Park, FL 32792" required>
+                <input type="input" ng-model="address" class="form-control" id="address" placeholder="3300 University Blvd, Winter Park, FL 32792" required>
             </div>
             <!-- END col-sm-10 -->
         </div>
@@ -24,7 +24,7 @@
         <div class="form-group">
             <label for="discount" class="col-sm-2 control-label">Discount Given:</label>
             <div class="col-sm-10">
-                <input type="input" class="form-control" id="discount" placeholder="10%" required>
+                <input type="input" ng-model="discount" class="form-control" id="discount" placeholder="10%" required>
             </div>
             <!-- END col-sm-10 -->
         </div>
@@ -32,7 +32,9 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2" id="g-login"></google-plus-signin>
+                <div id="g-login">
+                    <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2" id="g-login"></google-plus-signin>
+                </div>
                 <input type="submit" class="btn btn-default" id="addFood-btn" value="Submit">
             </div>
         </div>
@@ -42,3 +44,4 @@
 <div class="col-lg-4">
 
 </div>
+

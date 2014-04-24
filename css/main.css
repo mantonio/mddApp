@@ -203,6 +203,28 @@ Pseudo ::after element .perspective:after {
     z-index: -2;
 }
 /*
+ADD FOOD VIEW
+********************************************** */
+#addFood-btn {
+  display: none;
+  color: ghostwhite;
+  border-color: #d69200;
+  background-color: #f2a800;
+  width: 100%;
+  font-size: 18rem;
+}
+#addFood-btn:hover {
+  background-color: transparent;
+  color: #323227;
+}
+input, .form-control, #addFood-btn {
+  border-radius: 0;
+}
+input.form-control {
+  border: none;
+  box-shadow: 0 1px 1px rgba(50,50,39,0.2) inset;
+}
+/*
 FOOTER
 ********************************************** */
  footer {
