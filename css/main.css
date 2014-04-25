@@ -42,6 +42,9 @@ h5 {
 h6 {
     font-size: 16rem;
 }
+.inset {
+    padding: 40px;
+}
 .fsOrange {
     color: #f2a800;
 }
@@ -122,9 +125,6 @@ BOOTSTRAP THEME ELEMENTS
 #menu-toggle {
     display: none;
 }
-.inset {
-    padding: 20px;
-}
 /*
 MAIN NAV / BRAND
 ********************************************** */
@@ -203,9 +203,9 @@ Pseudo ::after element .perspective:after {
     z-index: -2;
 }
 /*
-ADD FOOD VIEW
+ADD RESTAURANT VIEW
 ********************************************** */
-#addFood-btn {
+#restaurantSubmit {
   display: none;
   color: ghostwhite;
   border-color: #d69200;
@@ -213,16 +213,29 @@ ADD FOOD VIEW
   width: 100%;
   font-size: 18rem;
 }
-#addFood-btn:hover {
+#restaurantSubmit:hover {
   background-color: transparent;
   color: #323227;
 }
-input, .form-control, #addFood-btn {
+input, .form-control, #restaurantSubmit {
   border-radius: 0;
 }
 input.form-control {
   border: none;
   box-shadow: 0 1px 1px rgba(50,50,39,0.2) inset;
+}
+#submitSuccess, #submitFail {
+    display: none;
+}
+/*
+LIST RESTAURANT VIEW
+********************************************** */
+.restaurant-info {
+    padding: 10px;
+    border-bottom: 1px dotted #323227;
+}
+.restaurant-info h4 {
+    font-weight: 300;
 }
 /*
 FOOTER

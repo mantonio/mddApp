@@ -1,0 +1,12 @@
+<h2>All Restaurants</h2>
+<div id="allFood">
+    <div class="restaurant-info" ng-repeat="restaurant in restaurants">
+        <h4>{{ restaurant.restaurantName }}</h4>
+        <div class="address">
+            {{ restaurant.address }}
+            <br>{{ restaurant.city }}, {{ restaurant.state }} {{ restaurant.zip }}
+            <br>
+            <strong>Discount:</strong>{{ restaurant.discount }}
+        </div>
+    </div>
+</div>
