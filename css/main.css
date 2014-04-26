@@ -2,7 +2,7 @@
 *
 * File - main.css
 * Author - Matt Antonio
-* Project - MDD App
+* Project - hungR
 * Location - css/main.css
 * Date - 04/15/14
 *
@@ -78,6 +78,23 @@ BOOTSTRAP THEME ELEMENTS
 #page-content-wrapper {
     width: 99%;
 }
+.
+.content-header {
+    height: 65px;
+    line-height: 65px;
+}
+.content-header h1 {
+    margin: 0;
+    margin-left: 20px;
+    line-height: 65px;
+    display: inline-block;
+}
+#menu-toggle {
+    display: none;
+}
+/*
+MAIN NAV / BRAND
+********************************************** */
 .sidebar-nav {
     position: absolute;
     top: 0;
@@ -112,33 +129,16 @@ BOOTSTRAP THEME ELEMENTS
 .sidebar-nav > .sidebar-brand a:hover {
     background: none;
 }
-.content-header {
-    height: 65px;
-    line-height: 65px;
-}
-.content-header h1 {
-    margin: 0;
-    margin-left: 20px;
-    line-height: 65px;
-    display: inline-block;
-}
-#menu-toggle {
-    display: none;
-}
-/*
-MAIN NAV / BRAND
-********************************************** */
  .sidebar-nav > .sidebar-brand a h1 {
     color: ghostwhite;
-    font-weight: 400;
 }
-.sidebar-nav > .sidebar-brand a:hover h1 {
+.sidebar-nav > .sidebar-brand a h1 {
     color: #f2a800;
 }
 /*.sidebar-nav > .sidebar-brand a h1 span.heavy {
   color: #f2a800;
 }*/
- .sidebar-nav > .sidebar-brand a:hover h1 span.heavy {
+ .sidebar-nav > .sidebar-brand a:hover h1 {
     color: ghostwhite;
 }
 .sidebar-brand .heavy {
@@ -241,17 +241,13 @@ LIST RESTAURANT VIEW
 FOOTER
 ********************************************** */
  footer {
-    /*background-color: yellow;*/
-    width: 82%;
-    min-height: 75px;
-    text-align: center;
+    width: 100%;
+    min-height: 25px;
     display: flex;
-    position: fixed;
-    bottom: 0;
+    margin-top: 50px;
 }
 footer div {
     color: #323227;
-    /*width: 300px;*/
     margin: auto 0;
 }
 footer div p {
