@@ -23,6 +23,7 @@
     <!-- ANGULAR -->
     <script type="text/javascript" src="js/angular/angular.js"></script>
     <script type="text/javascript" src="js/angular/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular/ngStorage.min.js"></script>
 
     <!-- FIREBASE -->
     <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
@@ -41,9 +42,14 @@
     <!-- JS FILES -->
     <script src="js/app/main.js"></script>
     <script src="js/app/controllers/restaurant_controller.js"></script>
-    <script src="js/app/controllers/api_controller.js"></script>
+    <script src="js/app/controllers/map_controller.js"></script>
+    <script src="js/app/controllers/geo_controller.js"></script>
     <script src="js/app/jquery-1.10.2.js"></script>
     <script src="js/app/bootstrap.js"></script>
+
+    <!-- ANGULAR GEOLOCATION -->
+    <script src="js/app/directives/angular-geolocation.min.js"></script>
+    <script src="js/app/services/geocoder_service.js"></script>
 
 </head>
 
@@ -65,10 +71,6 @@
                 </li>
                 <li><a href="#/add-restaurant">Add Restaurant</a>
                 </li>
-                <li><a href="#">About</a>
-                </li>
-                <li><a href="#">Contact</a>
-                </li>
             </ul>
         </div>
 
@@ -86,12 +88,14 @@
                 <div class="row">
 
                     <!-- Container for holding the views -->
+                    <div ng-controller="GeoController">
+                        <p>Your location is: {{ coords }}</p>
+                    </div>
+                    
                     <div ng-view></div>
 
                 </div>
                 <!-- END row -->
-
-                <?php echo($search) ?>
 
                 <footer>
                     <div class="col-lg-12">

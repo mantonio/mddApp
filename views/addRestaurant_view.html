@@ -1,13 +1,13 @@
 <div class="col-lg-8">
     <p>Know of a restaurant not in the list yet?</p>
     <p>Enter the restaurant's info and discount, log in with a Google account, then click the submit button when it appears!</p>
-    <div id="submitSuccess" class="alert alert-success alert-dismissable">
+    <div ng-show="msgSuccess" class="alert alert-success alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        Restaurant Information submitted successfully!
+        {{ alertMsg }}
     </div>
-    <div id="submitFail" class="alert alert-danger alert-dismissable">
+    <div ng-show="msgFail" class="alert alert-danger alert-dismissable">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        Restaurant Information NOT submitted. Please try again
+        {{ alertMsg }}
     </div>
     <form id="addFoodForm" class="form-horizontal" role="form" method="POST" ng-submit="addRestaurant()">
 
@@ -21,9 +21,9 @@
         <!-- END form-group -->
 
         <div class="form-group">
-            <label for="address" class="col-sm-2 control-label">Address:</label>
+            <label for="street" class="col-sm-2 control-label">Address:</label>
             <div class="col-sm-10">
-                <input type="input" ng-model="address" name="address" class="form-control" id="address" placeholder="ex. 3300 University Blvd" required>
+                <input type="input" ng-model="street" name="street" class="form-control" id="street" placeholder="ex. 3300 University Blvd" required>
             </div>
             <!-- END col-sm-10 -->
         </div>
@@ -110,7 +110,7 @@
         <!-- END form-group -->
 
         <div class="form-group">
-            <label for="discount" class="col-sm-2 control-label">Discount Given:</label>
+            <label for="discount" class="col-sm-2 control-label">Discount:</label>
             <div class="col-sm-10">
                 <input type="input" ng-model="discount" name="discount" class="form-control" id="discount" placeholder="ex. 10%" required>
             </div>

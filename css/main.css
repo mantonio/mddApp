@@ -152,10 +152,7 @@ GOOGLE MAP
 }
 #map-canvas {
     width: 640px;
-    /*height: 480px;*/
     margin: 0 auto;
-    /*box-shadow: 6px 6px 0 #f2a800, 12px 12px 0 #323227;*/
-    /*border: 6px solid #323227;*/
 }
 .drop-shadow {
     position: relative;
