@@ -22,6 +22,8 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
     $scope.$on('event:google-plus-signin-failure', function(event, authResult) {
         // User has not authorized the G+ App!
         console.log('Not signed into Google Plus.');
+
+        //TODO: Remove jquery
         $("#restaurantSubmit").css("display", "none");
     });
 
@@ -50,7 +52,7 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
                     long: latLng.lng
                 });
                 //console.log(latLng.lat);
-                
+
                 //Reset form fields after submission
                 $scope.restaurantName = "";
                 $scope.street = "";
@@ -62,6 +64,8 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
                 $scope.alertMsg = "Restaurant Information submitted successfully!";
             }, function(error) {
                 console.log('error', error);
+                $scope.msgFail = true;
+                $scope.alertMsg = "not working";
             });
         }
 
