@@ -8,19 +8,17 @@
  *
  ************************************************/
 
-app.controller("MapController", function($rootScope, $scope, $firebase,$filter) {
+app.controller("MapController", function($rootScope, $scope, $firebase, $filter) {
     var googleMapsKey = "AIzaSyB0w2_dnlKE13DikhEpEO4MBUb7-ZtGFn4";
 
     //Connect to Firebase so we can get coords for each restaurant
     var db = new Firebase("https://mddapp.firebaseio.com/");
     var markers = $firebase(db);
-    $scope.markers =[];
-    markers.$on("loaded", function() {
-     $scope.markers = $filter('toArray')(markers);
-            console.log('markers',$scope.markers);
-    });
-    console.log($scope.restaurants);
 
+    //Empty array for map markers
+    $scope.markers = [];
+
+    //Build the map and center on Full Sail
     $scope.map = {
         center: {
             latitude: 28.597161,
@@ -29,24 +27,19 @@ app.controller("MapController", function($rootScope, $scope, $firebase,$filter) 
         zoom: 17
     };
 
-    var getCoords = function(latLng) {
-        for(var i = 0; i < $scope.restaurants.length; i++) {
-            $scope.markers = [{
-                coords: {
-                    latitude: $scope.restaurants.lat,
-                    longitude: $scope.restaurants.lng
-                }
-            }]
-        }
-    };
-
-    $scope.marker = {
+    //Set the main Marker position to Full Sail
+    $scope.centerMarker = {
         coords: {
             latitude: 28.597161,
             longitude: -81.301508
-        },
-        showWindow: true,
-        title: "Full Sail University"
+        }
     };
+
+    //Display all the markers on view load
+    markers.$on("loaded", function() {
+        //Convert objects to arrays
+        $scope.markers = $filter('toArray')(markers);
+
+    });
 
 });

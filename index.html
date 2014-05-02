@@ -87,11 +87,12 @@
             <div class="page-content inset">
                 <div class="row">
 
-                    <!-- Container for holding the views -->
-                    <div ng-controller="GeoController">
-                        <p>Your location is: {{ coords }}</p>
+                    <div id="geoLocate" ng-controller="GeoController">
+                        <!-- <p>Your location is: {{ coords }}</p> -->
+                        
                     </div>
-                    
+
+                    <!-- Container for holding the views -->
                     <div ng-view></div>
 
                 </div>

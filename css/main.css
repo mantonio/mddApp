@@ -17,7 +17,7 @@ GENERAL ELEMENTS
 body {
     background-color: ghostwhite;
     font-size: 16rem;
-    font-family:'Alegreya Sans', sans-serif;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Exo', sans-serif;*/
@@ -54,6 +54,7 @@ h6 {
 .med {
     font-weight: 700;
 }
+
 /*
 BOOTSTRAP THEME ELEMENTS
 ********************************************** */
@@ -72,7 +73,6 @@ BOOTSTRAP THEME ELEMENTS
     z-index: 1000;
     transition: all 0.4s ease 0s;
     margin-right: 0;
-    /*border-right: 5px solid #f2a800;*/
     box-shadow: 5px 0 0 #f2a800;
 }
 #page-content-wrapper {
@@ -92,6 +92,7 @@ BOOTSTRAP THEME ELEMENTS
 #menu-toggle {
     display: none;
 }
+
 /*
 MAIN NAV / BRAND
 ********************************************** */
@@ -135,15 +136,13 @@ MAIN NAV / BRAND
 .sidebar-nav > .sidebar-brand a h1 {
     color: #f2a800;
 }
-/*.sidebar-nav > .sidebar-brand a h1 span.heavy {
-  color: #f2a800;
-}*/
  .sidebar-nav > .sidebar-brand a:hover h1 {
     color: ghostwhite;
 }
 .sidebar-brand .heavy {
     margin-left: -5px;
 }
+
 /*
 GOOGLE MAP
 ********************************************** */
@@ -152,7 +151,7 @@ GOOGLE MAP
 }
 #map-canvas {
     width: 640px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 .drop-shadow {
     position: relative;
@@ -199,6 +198,10 @@ Pseudo ::after element .perspective:after {
     position: absolute;
     z-index: -2;
 }
+#locateBtn {
+    margin-left: 10px;
+}
+
 /*
 ADD RESTAURANT VIEW
 ********************************************** */
@@ -250,6 +253,7 @@ footer div {
 footer div p {
   text-align: center;
 }
+
 /*
 MEDIA QUERIES
 ********************************************** */

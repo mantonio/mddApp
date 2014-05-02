@@ -1,9 +1,10 @@
 <div class="row">
+    <p id="getLocation">Would you like to find food near you? <button id="locateBtn" class="btn btn-default">Get my location</button></p>
     <div id="map-canvas" class="drop-shadow perspective">
         <google-map center="map.center" draggable="true" zoom="map.zoom">
 
             <marker coords="marker" title="marker.title" ng-repeat="marker in markers"></marker>
-            <marker coords="marker.coords" title="marker.title"></marker>
+            <marker coords="centerMarker.coords"></marker>
         </google-map>
     </div>
 </div>
