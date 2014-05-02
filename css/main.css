@@ -144,7 +144,7 @@ MAIN NAV / BRAND
 }
 
 /*
-GOOGLE MAP
+MAP VIEW
 ********************************************** */
  .angular-google-map-container {
     height: 468px;
@@ -155,7 +155,6 @@ GOOGLE MAP
 }
 .drop-shadow {
     position: relative;
-    /*float: left;*/
     width: 40%;
     padding: 1em;
     margin: 2em 10px 4em;
@@ -201,6 +200,9 @@ Pseudo ::after element .perspective:after {
 #locateBtn {
     margin-left: 10px;
 }
+p#getLocation {
+    text-align: center;
+}
 
 /*
 ADD RESTAURANT VIEW
@@ -227,6 +229,7 @@ input.form-control {
 #submitSuccess, #submitFail {
     display: none;
 }
+
 /*
 LIST RESTAURANT VIEW
 ********************************************** */
@@ -237,6 +240,7 @@ LIST RESTAURANT VIEW
 .restaurant-info h4 {
     font-weight: 300;
 }
+
 /*
 FOOTER
 ********************************************** */
