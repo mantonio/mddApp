@@ -13,18 +13,20 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
     //Successful log in to Google 
     $scope.$on('event:google-plus-signin-success', function(event, authResult) {
         // User successfully authorized the G+ App!
-        console.log('Signed in!');
-        $("#restaurantSubmit").css("display", "block");
-        $("#g-login").css("display", "none");
+
+        $scope.gLogin = true;
+        console.log('Signed in!', $scope.gLogin);
+        $scope.$apply();
     });
 
     //Unsuccessful log in to Google
     $scope.$on('event:google-plus-signin-failure', function(event, authResult) {
         // User has not authorized the G+ App!
-        console.log('Not signed into Google Plus.');
 
-        //TODO: Remove jquery
-        $("#restaurantSubmit").css("display", "none");
+        $scope.gLogin = false;
+        console.log('Not signed into Google Plus.', $scope.gLogin);
+        $scope.$apply();
+
     });
 
     //Connect to Firebase
@@ -37,7 +39,7 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
         //Throw an error message if form is not complete
         if ($scope.restaurantName == "" || $scope.address == "" || $scope.city == "" || $scope.zip == "" || $scope.discount == "") {
             $scope.msgFail = true;
-            $scope.alertMsg = "Restaurant Information NOT submitted. Please try again";
+            $scope.alertMsg = "Please fill in all empty fields";
             //If form has been filled out add data to firebase and reset form
         } else {
             var address = $scope.street + ", " + $scope.city + ", " + $scope.state + " " + $scope.zip;
@@ -65,7 +67,7 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
             }, function(error) {
                 console.log('error', error);
                 $scope.msgFail = true;
-                $scope.alertMsg = "not working";
+                $scope.alertMsg = "Restaurant Information NOT submitted. Please try again";
             });
         }
 

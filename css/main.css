@@ -20,7 +20,6 @@ body {
     font-family:'Alegreya Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
-    /*font-family: 'Exo', sans-serif;*/
     font-weight: 900;
     color: #f2a800;
 }
@@ -45,11 +44,20 @@ h6 {
 .fsOrange {
     color: #f2a800;
 }
+.fsBrown {
+    color: #323227;
+}
 .heavy {
     font-weight: 900;
 }
-.med {
+.med-heavy {
     font-weight: 700;
+}
+.med {
+    font-weight: ;
+}
+span.heavy.fsOrange {
+    letter-spacing: .25rem;
 }
 /*
 BOOTSTRAP THEME ELEMENTS
@@ -147,8 +155,14 @@ MAP VIEW
 #map-canvas {
     width: 100%;
 }
- #locateBtn {
+#locateBtn {
     margin-left: 10px;
+    background-color: #f2a800;
+    border-color: transparent;
+}
+#locateBtn:hover {
+    border-color: #f2a800;
+    background-color: transparent;
 }
 p#getLocation {
     text-align: center;
@@ -156,27 +170,23 @@ p#getLocation {
 /*
 ADD RESTAURANT VIEW
 ********************************************** */
- #restaurantSubmit {
-    display: none;
+ input[name="restaurantSubmit"] {
     color: ghostwhite;
     border-color: #d69200;
     background-color: #f2a800;
     width: 100%;
     font-size: 18rem;
 }
-#restaurantSubmit:hover {
+input[name="restaurantSubmit"]:hover {
     background-color: transparent;
     color: #323227;
 }
-input, .form-control, #restaurantSubmit {
+input, .form-control, input[name="restaurantSubmit"] {
     border-radius: 0;
 }
 input.form-control {
     border: none;
     box-shadow: 0 1px 1px rgba(50, 50, 39, 0.2) inset;
-}
-#submitSuccess, #submitFail {
-    display: none;
 }
 /*
 LIST RESTAURANT VIEW

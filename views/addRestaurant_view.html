@@ -122,10 +122,13 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <div id="g-login">
-                    <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2" id="g-login"></google-plus-signin>
+                <div ng-hide="gLogin" id="gLogin">
+                    <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2"></google-plus-signin>
                 </div>
-                <input type="submit" class="btn btn-default" id="restaurantSubmit" name="restaurantSubmit" value="Submit">
+                <div ng-show="gLogin" id="restaurantSubmit">
+                    <input type="submit" class="btn btn-default" name="restaurantSubmit" value="Submit">
+                </div>
+
             </div>
         </div>
     </form>

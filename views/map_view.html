@@ -1,16 +1,32 @@
 <div class="col-md-12">
-    <p>We all know that finding the list of student discounts on Connect is a pain and the link to discounts on mobile view doesn't even work. <span class="heavy fsOrange">hungR</span> can solve those problems. What is <span class="heavy fsOrange">hungR</span> you ask? It's a mobile app specifically for Full Sail students that will locate restaurants offering a student discount near your current location.</p>
-    
-    <p>Use <span class="heavy fsOrange">hungR</span> to quickly locate a restaurant offering student discounts near you!</p>
-</div>
+    <p>We all know that finding the list of student discounts on Connect is a pain and the link to discounts on mobile view doesn't even work.
+        <span class="med-heavy fsOrange">hungR</span> can solve those problems. What is
+        <span class="med-heavy fsOrange">hungR</span> you ask? It's a mobile app specifically for Full Sail students that will locate restaurants offering a student discount near your current location.</p>
 
-<!-- <p id="getLocation">Would you like to find food near you? <button id="locateBtn" class="btn btn-default">Get my location</button></p> -->
+    <p>Use <span class="med-heavy fsOrange">hungR</span> to quickly locate a restaurant offering student discounts near you!</p>
+    <div class="well">
+        <p id="getLocation">Would you like to find food near you?
+            <button ng-click="getPosition()" id="locateBtn" class="btn btn-default fsBrown med">Get my location</button>
+        </p>
+    </div><!-- END well -->
+</div><!-- END col-nd-12 -->
+
 <div id="map-canvas" class="col-md-12">
     <google-map center="map.center" draggable="true" zoom="map.zoom">
 
-        <marker coords="marker" title="marker.title" ng-repeat="marker in markers"></marker>
+        <marker coords="marker" title="marker.title" ng-repeat="marker in markers" ng-click="marker.show = !marker.show; marker.visible=true;">
+            <window isIconVisibleOnClick="marker.visible" show="marker.show" closeClick="marker.show=false;console.log('clicked')" coords="marker" ng-repeat="marker in markers">
+                Putting Content
+            </window>
+        </marker>
         <marker coords="centerMarker.coords"></marker>
     </google-map>
-</div>
+
+    <div coords="marker" title="marker.title" ng-repeat="marker in markers" ng-click="marker.show = !marker.show;">
+
+        <div isIconVisibleOnClick="true" show="marker.show" closeClick="marker.show=false" coords="marker" ng-repeat="marker in markers"></div>
+    </div>
+    <div coords="centerMarker.coords"></div>
+</div><!-- END map-canvas -->
 
 <!-- TODO: List out 5 closest locations to current position -->
