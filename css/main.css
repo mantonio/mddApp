@@ -17,7 +17,7 @@ GENERAL ELEMENTS
 body {
     background-color: ghostwhite;
     font-size: 16rem;
-    font-family: 'Alegreya Sans', sans-serif;
+    font-family:'Alegreya Sans', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Exo', sans-serif;*/
@@ -42,9 +42,6 @@ h5 {
 h6 {
     font-size: 16rem;
 }
-.inset {
-    padding: 40px;
-}
 .fsOrange {
     color: #f2a800;
 }
@@ -54,7 +51,6 @@ h6 {
 .med {
     font-weight: 700;
 }
-
 /*
 BOOTSTRAP THEME ELEMENTS
 ********************************************** */
@@ -72,13 +68,11 @@ BOOTSTRAP THEME ELEMENTS
     overflow-y: auto;
     z-index: 1000;
     transition: all 0.4s ease 0s;
-    margin-right: 0;
     box-shadow: 5px 0 0 #f2a800;
 }
 #page-content-wrapper {
-    width: 99%;
+    width: 100%;
 }
-.
 .content-header {
     height: 65px;
     line-height: 65px;
@@ -92,18 +86,19 @@ BOOTSTRAP THEME ELEMENTS
 #menu-toggle {
     display: none;
 }
-
+.inset {
+    padding: 20px;
+}
 /*
 MAIN NAV / BRAND
 ********************************************** */
-.sidebar-nav {
+ .sidebar-nav {
     position: absolute;
     top: 0;
     width: 250px;
     list-style: none;
     margin: 0;
     padding: 0;
-    /*bottom: 70px;*/
 }
 .sidebar-nav li {
     line-height: 40px;
@@ -130,117 +125,69 @@ MAIN NAV / BRAND
 .sidebar-nav > .sidebar-brand a:hover {
     background: none;
 }
- .sidebar-nav > .sidebar-brand a h1 {
+.sidebar-nav > .sidebar-brand a h1 {
     color: ghostwhite;
 }
 .sidebar-nav > .sidebar-brand a h1 {
     color: #f2a800;
 }
- .sidebar-nav > .sidebar-brand a:hover h1 {
+.sidebar-nav > .sidebar-brand a:hover h1 {
     color: ghostwhite;
 }
 .sidebar-brand .heavy {
     margin-left: -5px;
 }
-
 /*
 MAP VIEW
 ********************************************** */
  .angular-google-map-container {
     height: 468px;
+    width: 100%;
 }
 #map-canvas {
-    width: 640px;
-    margin: 10px auto;
+    width: 100%;
 }
-.drop-shadow {
-    position: relative;
-    width: 40%;
-    padding: 1em;
-    margin: 2em 10px 4em;
-    background: #fff;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-}
-.perspective:before {
-    left: 80px;
-    bottom: 5px;
-    width: 50%;
-    height: 35%;
-    max-width: 200px;
-    max-height: 50px;
-    -webkit-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
-    box-shadow: -80px 0 8px rgba(0, 0, 0, 0.4);
-    -webkit-transform: skew(50deg);
-    -moz-transform: skew(50deg);
-    -ms-transform: skew(50deg);
-    -o-transform: skew(50deg);
-    transform: skew(50deg);
-    -webkit-transform-origin: 0 100%;
-    -moz-transform-origin: 0 100%;
-    -ms-transform-origin: 0 100%;
-    -o-transform-origin: 0 100%;
-    transform-origin: 0 100%;
-}
-.drop-shadow:before, .drop-shadow:after {
-    content:"";
-    position: absolute;
-    z-index: -2;
-}
-Pseudo ::after element .perspective:after {
-    display: none;
-}
-.drop-shadow:before, .drop-shadow:after {
-    content:"";
-    position: absolute;
-    z-index: -2;
-}
-#locateBtn {
+ #locateBtn {
     margin-left: 10px;
 }
 p#getLocation {
     text-align: center;
 }
-
 /*
 ADD RESTAURANT VIEW
 ********************************************** */
-#restaurantSubmit {
-  display: none;
-  color: ghostwhite;
-  border-color: #d69200;
-  background-color: #f2a800;
-  width: 100%;
-  font-size: 18rem;
+ #restaurantSubmit {
+    display: none;
+    color: ghostwhite;
+    border-color: #d69200;
+    background-color: #f2a800;
+    width: 100%;
+    font-size: 18rem;
 }
 #restaurantSubmit:hover {
-  background-color: transparent;
-  color: #323227;
+    background-color: transparent;
+    color: #323227;
 }
 input, .form-control, #restaurantSubmit {
-  border-radius: 0;
+    border-radius: 0;
 }
 input.form-control {
-  border: none;
-  box-shadow: 0 1px 1px rgba(50,50,39,0.2) inset;
+    border: none;
+    box-shadow: 0 1px 1px rgba(50, 50, 39, 0.2) inset;
 }
 #submitSuccess, #submitFail {
     display: none;
 }
-
 /*
 LIST RESTAURANT VIEW
 ********************************************** */
-.restaurant-info {
+ .restaurant-info {
     padding: 10px;
     border-bottom: 1px dotted #323227;
 }
 .restaurant-info h4 {
     font-weight: 300;
 }
-
 /*
 FOOTER
 ********************************************** */
@@ -255,9 +202,8 @@ footer div {
     margin: auto 0;
 }
 footer div p {
-  text-align: center;
+    text-align: center;
 }
-
 /*
 MEDIA QUERIES
 ********************************************** */
@@ -283,3 +229,4 @@ MEDIA QUERIES
     .inset {
         padding: 15px;
     }
+}

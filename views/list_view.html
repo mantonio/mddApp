@@ -1,10 +1,14 @@
-<h2>All Restaurants</h2>
-<div id="allFood">
-    <div class="restaurant-info" ng-repeat="restaurant in restaurants">
-        <h4>{{ restaurant.restaurantName }}</h4>
-        <div class="address">
-            {{ restaurant.address }}<br>
-            <strong>Discount:</strong> {{ restaurant.discount }}
+<div class="col-md-12">
+    <h3>All Restaurants</h3>
+    <div id="allFood">
+        <div class="restaurant-info" ng-repeat="restaurant in restaurants">
+            <h4>{{ restaurant.restaurantName }}</h4>
+            <div class="address">
+                {{ restaurant.address }}
+                <br>
+                <strong>Discount:</strong>{{ restaurant.discount }}
+            </div>
+            <!-- TODO: Get menus from CityGrid API -->
         </div>
     </div>
 </div>

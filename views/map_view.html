@@ -1,10 +1,16 @@
-<div class="row">
-    <p id="getLocation">Would you like to find food near you? <button id="locateBtn" class="btn btn-default">Get my location</button></p>
-    <div id="map-canvas" class="drop-shadow perspective">
-        <google-map center="map.center" draggable="true" zoom="map.zoom">
-
-            <marker coords="marker" title="marker.title" ng-repeat="marker in markers"></marker>
-            <marker coords="centerMarker.coords"></marker>
-        </google-map>
-    </div>
+<div class="col-md-12">
+    <p>We all know that finding the list of student discounts on Connect is a pain and the link to discounts on mobile view doesn't even work. <span class="heavy fsOrange">hungR</span> can solve those problems. What is <span class="heavy fsOrange">hungR</span> you ask? It's a mobile app specifically for Full Sail students that will locate restaurants offering a student discount near your current location.</p>
+    <p>Not in the vicinity of Full Sail, but know of a restaurant that offers student discounts in general? Go to the "Add Restaurant" page and let us know!</p>
+    <p>Use <span class="heavy fsOrange">hungR</span> to quickly locate a restaurant offering student discounts near you!</p>
 </div>
+
+<!-- <p id="getLocation">Would you like to find food near you? <button id="locateBtn" class="btn btn-default">Get my location</button></p> -->
+<div id="map-canvas" class="col-md-12">
+    <google-map center="map.center" draggable="true" zoom="map.zoom">
+
+        <marker coords="marker" title="marker.title" ng-repeat="marker in markers"></marker>
+        <marker coords="centerMarker.coords"></marker>
+    </google-map>
+</div>
+
+<!-- TODO: List out 5 closest locations to current position -->
