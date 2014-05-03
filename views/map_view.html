@@ -15,7 +15,7 @@
     <google-map center="map.center" draggable="true" zoom="map.zoom">
 
         <marker coords="marker" title="marker.title" ng-repeat="marker in markers" ng-click="marker.show = !marker.show; marker.visible=true;">
-            <window isIconVisibleOnClick="marker.visible" show="marker.show" closeClick="marker.show=false;console.log('clicked')" coords="marker">
+            <window isIconVisibleOnClick="marker.visible" show="marker.show" closeClick="marker.show=false" coords="marker">
                 {{ marker.restaurantName }}<br>
                 {{ marker.address }}
             </window>
