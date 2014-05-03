@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>foodhangR</title>
+    <title>hungR</title>
 
     <!-- BOOTSTRAP CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
@@ -18,11 +18,17 @@
 
     <!-- GOOGLE FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,700,900' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
 
     <!-- ANGULAR -->
     <script type="text/javascript" src="js/angular/angular.js"></script>
     <script type="text/javascript" src="js/angular/angular-route.js"></script>
+    <script type="text/javascript" src="js/angular/ngStorage.min.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+
+    <!-- ANGULARFIRE -->
+    <script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
 
     <!-- GOOGLE MAPS -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0w2_dnlKE13DikhEpEO4MBUb7-ZtGFn4&sensor=true"></script>
@@ -34,11 +40,14 @@
 
     <!-- JS FILES -->
     <script src="js/app/main.js"></script>
+    <script src="js/app/controllers/restaurant_controller.js"></script>
+    <script src="js/app/controllers/map_controller.js"></script>
     <script src="js/app/jquery-1.10.2.js"></script>
     <script src="js/app/bootstrap.js"></script>
-    <script src="js/app/controllers/map_controller.js"></script>
-    <script src="js/app/controllers/list_controller.js"></script>
-    <script src="js/app/controllers/addFood_controller.js"></script>
+
+    <!-- ANGULAR GEOLOCATION -->
+    <script src="js/app/directives/angular-geolocation.min.js"></script>
+    <script src="js/app/services/geocoder_service.js"></script>
 
 </head>
 
@@ -51,20 +60,14 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        <h1>food
-                            <span class="heavy fsOrange">hangR</span>
-                        </h1>
+                        <h1 class="heavy fsOrange">hungR</h1>
                     </a>
                 </li>
                 <li><a href="#/">Dashboard</a>
                 </li>
-                <li><a href="#/discounts">All Discounts</a>
+                <li><a href="#/all-restaurants">All Restaurants</a>
                 </li>
-                <li><a href="#/addFood">Add Food</a>
-                </li>
-                <li><a href="#">About</a>
-                </li>
-                <li><a href="#">Contact</a>
+                <li><a href="#/add-restaurant">Add Restaurant</a>
                 </li>
             </ul>
         </div>
@@ -73,11 +76,12 @@
         <div id="page-content-wrapper">
             <div class="content-header">
                 <h1>
-                    <a id="menu-toggle" href="#" class="btn btn-default"><i class="icon-reorder"></i></a>
+                    <a id="menu-toggle" href="#" class="btn btn-default fsOrange"><i class="fa fa-bars fa-lg"></i></a>
                     What's for lunch?
                 </h1>
             </div>
             <!-- END content-header -->
+
             <!-- Keep all page content within the page-content inset div! -->
             <div class="page-content inset">
                 <div class="row">
@@ -85,15 +89,15 @@
                     <!-- Container for holding the views -->
                     <div ng-view></div>
 
-                    <footer>
-                        <div class="col-lg-12">
-                            <p id="copyright">Copyright &copy; 2014 // Matt Antonio // Mobile Device Deployment // Full Sail - Web Design &amp; Development B.S.</p>
-                        </div>
-                        <!-- END col-lg-12 -->
-                    </footer>
-
                 </div>
                 <!-- END row -->
+
+                <footer>
+                    <div class="col-lg-12">
+                        <p id="copyright">Copyright &copy; 2014 // Matt Antonio // Mobile Device Deployment // Full Sail - Web Design &amp; Development B.S.</p>
+                    </div>
+                    <!-- END col-lg-12 -->
+                </footer>
             </div>
             <!-- END page-content inset -->
         </div>
