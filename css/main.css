@@ -59,9 +59,6 @@ h6 {
 span.heavy.fsOrange {
     letter-spacing: .25rem;
 }
-/*
-BOOTSTRAP THEME ELEMENTS
-********************************************** */
  #wrapper {
     padding-left: 250px;
     transition: all 0.4s ease 0s;
@@ -96,6 +93,13 @@ BOOTSTRAP THEME ELEMENTS
 }
 .inset {
     padding: 20px;
+}
+#menu-toggle {
+    border-color: #323227;
+}
+#menu-toggle:hover {
+    background-color: #f2a800;
+    color: #fff;
 }
 /*
 MAIN NAV / BRAND
