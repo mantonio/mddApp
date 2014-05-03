@@ -41,7 +41,8 @@ app.controller("MapController", function($rootScope, $scope, $firebase, $filter,
 
             $scope.map.center = $scope.centerMarker.coords = {
                 latitude: data.coords.latitude,
-                longitude: data.coords.longitude
+                longitude: data.coords.longitude,
+                icon: "img/blue_marker.png"
             };
         });
     };
