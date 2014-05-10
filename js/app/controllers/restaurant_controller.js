@@ -73,4 +73,11 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
 
     }
 
+    $scope.disableForm = function(e) {
+        if ($scope.restaurantName !== "" || $scope.address !== "" || $scope.city !== "" || $scope.zip !== "" || $scope.discount !== "") {
+            $scope.msgFail = true;
+            $scope.alertMsg = "This form is disabled during the development.";
+        }
+    }
+
 });
