@@ -174,23 +174,26 @@ p#getLocation {
 /*
 ADD RESTAURANT VIEW
 ********************************************** */
- input[name="restaurantSubmit"] {
+ input[name="restaurantSubmit"], button[name="restaurantBtn"] {
     color: ghostwhite;
     border-color: #d69200;
     background-color: #f2a800;
     width: 100%;
     font-size: 18rem;
 }
-input[name="restaurantSubmit"]:hover {
+input[name="restaurantSubmit"]:hover, button[name="restaurantBtn"]:hover {
     background-color: transparent;
     color: #323227;
 }
-input, .form-control, input[name="restaurantSubmit"] {
+input, .form-control, input[name="restaurantSubmit"], button[name="restaurantBtn"] {
     border-radius: 0;
 }
 input.form-control {
     border: none;
     box-shadow: 0 1px 1px rgba(50, 50, 39, 0.2) inset;
+}
+#successMsg, #failMsg {
+    width: 550px;
 }
 /*
 LIST RESTAURANT VIEW

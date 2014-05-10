@@ -2,17 +2,19 @@
     <h3>Add Restaurant</h3>
     <p>Not in the vicinity of Full Sail, but know of a restaurant that offers student discounts?</p>
     <p>Enter the restaurant's info and discount, log in with a Google account, then click the submit button when it appears!</p>
-    <div ng-show="msgSuccess" class="alert alert-success alert-dismissable">
+    <div id="successMsg" ng-show="msgSuccess" class="alert alert-success alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {{ alertMsg }}
     </div>
-    <div ng-show="msgFail" class="alert alert-danger alert-dismissable">
+    <div id="failMsg" ng-show="msgFail" class="alert alert-danger alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
         {{ alertMsg }}
     </div>
 </div>
 <div class="col-md-6">
-    <form id="addFoodForm" class="form-horizontal" role="form" method="POST" ng-submit="addRestaurant()">
+    <form id="addFoodForm" class="form-horizontal" role="form" method="POST" ng-submit="formDisabled()">
+
+    <!-- ng-submit="addRestaurant()" -->
 
         <div class="form-group">
             <label for="restaurantName" class="col-sm-2 control-label">Restaurant:</label>
@@ -126,7 +128,8 @@
                     <google-plus-signin clientid="414649816906-jv85cj9hogk7as40nirlcn3v3r4545m2"></google-plus-signin>
                 </div>
                 <div ng-show="gLogin" id="restaurantSubmit">
-                    <input type="submit" class="btn btn-default" name="restaurantSubmit" value="Submit">
+                    <button class="btn btn-default" name="restaurantBtn">Submit</button>
+                    <!--- <input type="submit" class="btn btn-default" name="restaurantSubmit" value="Submit"> -->
                 </div>
 
             </div>
