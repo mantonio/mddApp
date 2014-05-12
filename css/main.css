@@ -41,11 +41,30 @@ h5 {
 h6 {
     font-size: 16rem;
 }
+/* Main Colors */
 .fsOrange {
     color: #f2a800;
 }
 .fsBrown {
     color: #323227;
+}
+.firebrick {
+    color: firebrick;
+}
+.brand {
+    font-family: 'Londrina Outline', cursive;
+    color: #acacac;
+    font-size: 22rem;
+    cursor: pointer;
+}
+.brand:hover {
+    color: firebrick;
+}
+span.brand:hover span.firebrick {
+    color: #acacac;
+}
+a#brand-footer:hover {
+    text-decoration: none;
 }
 .heavy {
     font-weight: 900;

@@ -81,3 +81,5 @@ app.controller("RestaurantController", function($rootScope, $scope, $firebase, G
     }
 
 });
+
+interpreted
